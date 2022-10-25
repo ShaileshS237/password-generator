@@ -1,0 +1,82 @@
+.row {
+  --bs-gutter-x: 0rem;
+}
+
+.image {
+  align-items: flex-start;
+  height: 100%;
+  display: flex;
+  padding: 6%;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.password-gene {
+  padding: 28px 5%;
+  background-color: #040f2d;
+  height: 100%;
+  color: #faffff;
+}
+
+.password-gene .gene-pass {
+  display: flex;
+  align-items: center;
+  background: #091642;
+  border-radius: 14px;
+  height: 89px;
+}
+
+.password-gene .clipboard {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clipboard img {
+  width: 39%;
+  height: 100%;
+  background: white;
+  padding: 11px;
+  border-radius: 10px;
+  margin-right: 23px;
+  cursor: pointer;
+}
+
+.password-gene .range {
+  display: flex;
+  align-items: center;
+  background: #091642;
+  border-radius: 14px;
+}
+
+.password-gene .extra-option {
+  display: flex;
+  align-items: center;
+  background: #091642;
+  border-radius: 14px;
+  height: 48px;
+  margin-bottom: 20px;
+}
+
+.small-title {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.extra-option .title {
+  display: flex;
+  justify-content: left;
+  padding-left: 31px;
+}
+
+.extra-option .toggle {
+  display: flex;
+  justify-content: right;
+  padding-right: 31px;
+}
+
+.password-gene button {
+  width: 100%;
+  height: 67px;
+  border-radius: 13px;
+  font-size: 20px;
+}

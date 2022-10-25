@@ -1,0 +1,85 @@
+<div class="text-center" style="height: 100%">
+  <div class="row" style="height: 100%">
+    <div class="col-12 col-lg-5 image">
+      <img class="center" style="width: 100%" src="assets/pass.png" alt="" />
+    </div>
+    <div class="col-12 col-lg-7 password-gene">
+      <div class="row" style="text-align: left">
+        <h6 style="color: #525c80">GENERATED PASSWORD :</h6>
+      </div>
+      <div class="row mb-4 gene-pass">
+        <div class="col-10">
+          <h3>{{ newPassword }}</h3>
+        </div>
+        <div class="col-2 clipboard" *ngIf="newPassword">
+          <img
+            matTooltip="Copy To Clipboard"
+            [cdkCopyToClipboard]="newPassword"
+            (click)="openSnackBar('Copied To Clipboard', 'OK')"
+            src="https://cdn-icons-png.flaticon.com/512/54/54702.png"
+            alt=""
+          />
+        </div>
+      </div>
+      <div style="color: white">
+        <div class="row" style="text-align: left">
+          <h6 style="color: #525c80">Length : {{ size }}</h6>
+        </div>
+        <div class="row range">
+          <div class="col-1">4</div>
+          <div class="col">
+            <mat-slider
+              style="width: 100%"
+              min="4"
+              max="20"
+              [(ngModel)]="size"
+            ></mat-slider>
+          </div>
+          <div class="col-1">20</div>
+        </div>
+
+        <div class="row small-title">
+          <h6 style="color: #525c80">Extra Options :</h6>
+        </div>
+
+        <div class="row extra-option">
+          <div class="col-8 title">Include Letters</div>
+          <div class="col-4 toggle">
+            <mat-slide-toggle
+              [(ngModel)]="letters"
+              (change)="changeSetting('letters', letters)"
+            ></mat-slide-toggle>
+          </div>
+        </div>
+
+        <div class="row extra-option">
+          <div class="col-8 title">Include Numbers</div>
+          <div class="col-4 toggle">
+            <mat-slide-toggle
+              [(ngModel)]="numbers"
+              (change)="changeSetting('numbers', numbers)"
+            ></mat-slide-toggle>
+          </div>
+        </div>
+
+        <div class="row extra-option">
+          <div class="col-8 title">Include Symbols</div>
+          <div class="col-4 toggle">
+            <mat-slide-toggle
+              [(ngModel)]="symbols"
+              (change)="changeSetting('symbols', symbols)"
+            ></mat-slide-toggle>
+          </div>
+        </div>
+        <button
+          mat-raised-button
+          color="primary"
+          class="mt-5"
+          (click)="generate()"
+        >
+          Generate password
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
