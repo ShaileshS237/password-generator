@@ -56,9 +56,9 @@ export class AppComponent {
     console.log(this.letters, this.numbers, this.symbols);
 
     if (
-      this.letters == false ||
-      this.letters == false ||
-      this.letters == false
+      this.letters == false &&
+      this.numbers == false &&
+      this.symbols == false
     ) {
       this.newPassword = '';
       this._snackBar.open(
@@ -73,6 +73,8 @@ export class AppComponent {
         this.symbols ? this.checkboxes[2].library.split('') : []
       );
 
+      console.log(this.dictionary);
+
       var newPassword = '';
       console.log(this.size);
 
@@ -83,8 +85,8 @@ export class AppComponent {
 
       this.newPassword = newPassword;
     }
-    setTimeout(() => {
-      this.title = 'Generate Password';
-    }, 1000);
+    // setTimeout(() => {
+    //   this.title = 'Generate Password';
+    // }, 1000);
   }
 }
